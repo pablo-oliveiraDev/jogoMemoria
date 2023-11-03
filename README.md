@@ -1,0 +1,1 @@
+<!-- crie reademe pt-br para jogo da memoria em javascript , index.css,reset.css e html 5 com emojis nos topicos e deixe espaços para imagens ?-->

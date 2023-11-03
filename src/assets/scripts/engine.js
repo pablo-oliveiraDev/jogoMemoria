@@ -34,9 +34,10 @@ for (let i = 0; i < emojis.length; i++) {
     box.onclick = handleClick;
     document.querySelector(".game").appendChild(box);
 }
-function playSound(musicName, volume) {
+function playSound(musicName, volume,autoplay) {
     var audio = new Audio(`./src/assets/music/${musicName}`);
     audio.volume = volume;
+    audio.autoplay = autoplay === null || undefined ? false : autoplay;
     audio.play();
 }
 
@@ -50,7 +51,7 @@ function handleClick() {
         setTimeout(checkMatch, 500);
     }
 }
-new playSound('infectedVibes157.mp3', 0.1);
+new playSound('infectedVibes157.mp3', 0.1,true);
 function checkMatch() {
     if (openCards[0].innerHTML === openCards[1].innerHTML) {
         openCards[0].classList.add('boxMatch');
